@@ -104,7 +104,7 @@ namespace EscolaOnline.Controllers
             return View(video);
         }
 
-       
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

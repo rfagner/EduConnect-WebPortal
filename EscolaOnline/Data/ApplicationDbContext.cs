@@ -15,4 +15,15 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Video> Videos { get; set; }
     public DbSet<Event> Events { get; set; }
     public DbSet<News> News { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.Entity<AcademicActivity>()
+            .HasOne(a => a.Author)
+            .WithMany()
+            .HasForeignKey(a => a.AuthorId);
+    }
+
 }

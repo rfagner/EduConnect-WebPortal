@@ -104,7 +104,7 @@ namespace EscolaOnline.Controllers
             return View(eventItem);
         }
 
-        
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -114,6 +114,7 @@ namespace EscolaOnline.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool EventExists(int id)
         {

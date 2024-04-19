@@ -1,0 +1,15 @@
+﻿@model EscolaOnline.Models.AcademicActivity
+
+<h2>Delete Academic Activity</h2>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    <p><strong>Date:</strong> @Model.PublishDate.ToString("yyyy-MM-dd")</p>
+    <form asp-action="Delete" asp-controller="AcademicActivities" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

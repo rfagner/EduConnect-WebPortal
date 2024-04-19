@@ -1,0 +1,68 @@
+﻿@model EscolaOnline.ViewModels.RegisterViewModel
+
+<h2>Register</h2>
+<form asp-action="Register" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" type="password" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" class="form-control" type="password" />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nome"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DataNascimento"></label>
+        <input asp-for="DataNascimento" class="form-control" type="date" />
+        <span asp-validation-for="DataNascimento" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CEP"></label>
+        <input asp-for="CEP" class="form-control" />
+        <span asp-validation-for="CEP" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Rua"></label>
+        <input asp-for="Rua" class="form-control"  />
+        <span asp-validation-for="Rua" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Numero"></label>
+        <input asp-for="Numero" class="form-control" />
+        <span asp-validation-for="Numero" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bairro"></label>
+        <input asp-for="Bairro" class="form-control" />
+        <span asp-validation-for="Bairro" class="text-danger"></span>
+    </div>    
+    <div class="form-group">
+        <label asp-for="Cidade"></label>
+        <input asp-for="Cidade" class="form-control" />
+        <span asp-validation-for="Cidade" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Estado"></label>
+        <input asp-for="Estado" class="form-control" />
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Tipo"></label>
+        <input asp-for="Tipo" class="form-control" />
+        <span asp-validation-for="Tipo" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

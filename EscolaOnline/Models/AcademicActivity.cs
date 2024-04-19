@@ -7,7 +7,7 @@
         public string? Description { get; set; }
         public DateTime PublishDate { get; set; }
         public string? AuthorId { get; set; }
-        public ApplicationUser Author { get; set; }
+        public ApplicationUser? Author { get; set; }
     }
 
 }
