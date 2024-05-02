@@ -26,6 +26,6 @@ namespace EscolaOnline.Models
         public string Estado { get; set; }
 
         [Required(ErrorMessage = "O tipo de usuário é obrigatório.")]
-        public string Tipo { get; set; } // Aluno, Professor, Pai
+        public string Tipo { get; set; }
     }
 }

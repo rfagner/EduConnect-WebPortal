@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel;  // Necessário para o atributo DisplayName
+using System.ComponentModel; 
 
 namespace EscolaOnline.Models
 {
