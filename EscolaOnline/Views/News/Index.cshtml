@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<EscolaOnline.Models.News>
 
-<h2>News</h2>
+<h2>Notícias</h2>
 <p>
-    <a asp-action="Create" class="btn btn-primary">Add New News</a>
+    <a asp-action="Create" class="btn btn-primary">Criar nova notícia</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Content</th>
-            <th>Publish Date</th>
-            <th></th>
+            <th>Título</th>
+            <th>Conteúdo</th>
+            <th>Data da Publicação</th>
+            <th>Ação</th>
         </tr>
     </thead>
     <tbody>
@@ -21,9 +21,9 @@
                 <td>@Html.DisplayFor(modelItem => item.Content)</td>
                 <td>@Html.DisplayFor(modelItem => item.PublishDate)</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         }

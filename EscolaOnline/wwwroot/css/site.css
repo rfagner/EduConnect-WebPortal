@@ -1,59 +1,80 @@
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-    position: relative;
-    min-height: 100%;
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    margin-bottom: 60px;
-    padding-top: 80px;
+    padding-top: 75px; 
 }
 
 
-.form-group label {
-    font-weight: bold;
-}
-
-.input-group {
-    margin-bottom: 1rem;
+.header {
+    position: relative; 
+    z-index: 1030; 
 }
 
 
-h2 {
-    color: #007BFF; 
-    margin-bottom: 20px;
+.navbar, .footer {
+    background-color: #003366; 
+    color: #ffffff;
+}
+
+.navbar {
+    padding: 0.5rem 1rem; 
 }
 
 
-.btn-primary, .btn-danger, .btn-success, .btn-secondary {
-    margin: 5px;
+.nav-link {
+    padding: 0.5rem 0.75rem; 
+    font-size: 0.9rem; 
 }
 
 
-.form-group {
-    margin-bottom: 15px;
+.navbar-brand {
+    font-size: 1.25rem; 
+}
+
+.navbar-toggler {
+    padding: 0.3rem;
+    font-size: 0.85rem; 
+}
+
+
+.nav-link:hover, .nav-link:focus {
+    color: #ffdd59; 
+    text-decoration: none;
+}
+
+
+.btn-primary {
+    background-color: #0044cc;
+    border-color: #0044cc;
+}
+
+.btn-primary:hover {
+    background-color: #003399;
+    border-color: #003399;
 }
 
 .footer {
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-    height: 60px; 
-    background-color: #f5f5f5; 
-    text-align: center; 
-    line-height: 60px; 
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #ffffff;
 }
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+main {
+    padding-bottom: 60px; 
+}
+

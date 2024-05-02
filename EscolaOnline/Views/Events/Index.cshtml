@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<EscolaOnline.Models.Event>
 
-<h2>Events</h2>
+<h2>Eventos</h2>
 <p>
-    <a asp-action="Create" class="btn btn-primary">Add New Event</a>
+    <a asp-action="Create" class="btn btn-primary">Criar Novo Evento</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Location</th>
-            <th>Event Date</th>
-            <th></th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Localização</th>
+            <th>Data do Evento</th>
+            <th>Ação</th>
         </tr>
     </thead>
     <tbody>
@@ -23,9 +23,9 @@
                 <td>@Html.DisplayFor(modelItem => item.Location)</td>
                 <td>@Html.DisplayFor(modelItem => item.EventDate)</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         }

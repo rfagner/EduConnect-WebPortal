@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<EscolaOnline.Models.AcademicActivity>
 
-<h2>Academic Activities</h2>
+<h2>Atividades Acadêmicas</h2>
 <p>
-    <a asp-action="Create" class="btn btn-primary">Add New</a>
+    <a asp-action="Create" class="btn btn-primary">Nova Atividade</a>
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Publish Date</th>
+            <th>Título</th>
+            <th>Descrição</th>
+            <th>Data de cadastro</th>
             <th></th>
         </tr>
     </thead>
@@ -21,9 +21,9 @@
                 <td>@Html.DisplayFor(modelItem => item.Description)</td>
                 <td>@Html.DisplayFor(modelItem => item.PublishDate)</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         }

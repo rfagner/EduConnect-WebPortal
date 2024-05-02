@@ -1,6 +1,6 @@
 ﻿@model EscolaOnline.Models.AcademicActivity
 
-<h2>Edit Academic Activity</h2>
+<h2>Editar Atividades Acadêmicas </h2>
 <form asp-action="Edit">
     <div asp-validation-summary="All" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
@@ -19,5 +19,6 @@
         <input asp-for="PublishDate" class="form-control" type="date" />
         <span asp-validation-for="PublishDate" class="text-danger"></span>
     </div>
-    <button type="submit" class="btn btn-success">Save Changes</button>
+    <button type="submit" class="btn btn-success">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </form>

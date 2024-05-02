@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace EscolaOnline.Data;
 
@@ -14,7 +15,8 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<AcademicActivity> AcademicActivities { get; set; }
     public DbSet<Video> Videos { get; set; }
     public DbSet<Event> Events { get; set; }
-    public DbSet<News> News { get; set; }
+    public DbSet<News> News { get; set; }    
+    public DbSet<Assignment> Assignments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -23,7 +25,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         builder.Entity<AcademicActivity>()
             .HasOne(a => a.Author)
             .WithMany()
-            .HasForeignKey(a => a.AuthorId);
+            .HasForeignKey(a => a.AuthorId);        
     }
 
 }

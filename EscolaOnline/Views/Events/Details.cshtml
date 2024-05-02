@@ -1,11 +1,11 @@
 ﻿@model EscolaOnline.Models.Event
 
-<h2>Event Details</h2>
+<h2>Detalhes do Evento</h2>
 <div>
     <h4>@Model.Title</h4>
     <div><strong>Description:</strong> @Model.Description</div>
     <div><strong>Location:</strong> @Model.Location</div>
     <div><strong>Date:</strong> @Model.EventDate.ToString("yyyy-MM-dd HH:mm")</div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
 </div>

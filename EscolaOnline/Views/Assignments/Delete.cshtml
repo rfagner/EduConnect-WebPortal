@@ -1,0 +1,30 @@
+﻿@model EscolaOnline.Models.Assignment
+
+<h2>Excluir atividade</h2>
+
+<form asp-action="DeleteConfirmed" asp-controller="Assignments" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <h4>Tem certeza de que deseja excluir isto?</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>Title</dt>
+            <dd>@Model.Title</dd>
+            <dt>Subject</dt>
+            <dd>@Model.Subject</dd>
+            <dt>Student Name</dt>
+            <dd>@Model.StudentName</dd>
+            <dt>Teacher Name</dt>
+            <dd>@Model.TeacherName</dd>
+            <dt>Grade</dt>
+            <dd>@Model.Grade</dd>
+            <dt>Class</dt>
+            <dd>@Model.Class</dd>
+            <!-- Repita para os outros campos -->
+        </dl>       
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+

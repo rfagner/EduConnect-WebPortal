@@ -1,15 +1,15 @@
 ﻿@model EscolaOnline.Models.Event
 
-<h2>Delete Event</h2>
-<h3>Are you sure you want to delete this event?</h3>
+<h2>Excluir Evento</h2>
+<h3>Tem certeza de que deseja excluir este evento?</h3>
 <div>
     <h4>@Model.Title</h4>
     <div><strong>Description:</strong> @Model.Description</div>
     <div><strong>Date:</strong> @Model.EventDate.ToString("yyyy-MM-dd")</div>
     <form asp-action="Delete" method="post">
         <input type="hidden" name="id" value="@Model.Id" />
-        <button type="submit" class="btn btn-danger">Delete</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
     </form>
 
 </div>

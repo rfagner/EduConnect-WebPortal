@@ -4,15 +4,17 @@ namespace EscolaOnline.ViewModels
 {
     public class LoginViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "O campo E-mail é obrigatório.")]
+        [EmailAddress(ErrorMessage = "O campo E-mail não é um endereço de e-mail válido.")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo Senha é obrigatório.")]
         [DataType(DataType.Password)]
+        [Display(Name = "Senha")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Lembrar de mim?")]
         public bool RememberMe { get; set; }
     }
 }

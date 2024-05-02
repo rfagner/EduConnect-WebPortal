@@ -1,7 +1,7 @@
 ﻿@model EscolaOnline.Models.AcademicActivity
 
-<h2>Delete Academic Activity</h2>
-<h3>Are you sure you want to delete this?</h3>
+<h2>Excluir Atividades Acadêmicas</h2>
+<h3>Tem certeza de que deseja excluir isto?</h3>
 <div>
     <h4>@Model.Title</h4>
     <p>@Model.Description</p>
@@ -9,7 +9,7 @@
     <form asp-action="Delete" asp-controller="AcademicActivities" method="post">
         <input type="hidden" name="id" value="@Model.Id" />
         @Html.AntiForgeryToken()
-        <button type="submit" class="btn btn-danger">Delete</button>
-        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        <button type="submit" class="btn btn-danger">Excluir</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
     </form>
 </div>
